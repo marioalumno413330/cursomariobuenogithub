@@ -47,6 +47,7 @@ public class UsuarioController {
         usuario.setEmail("lucasmoy@hotmail.com");
         usuario.setTelefono("652206959");
         return usuario;
+
     }
 
     @RequestMapping(value = "usuario4")
