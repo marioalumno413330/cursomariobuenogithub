@@ -24,6 +24,10 @@ public class UsuarioController {
         usuario.setTelefono("652206959");
         return usuario;
     }
+    @RequestMapping(value = "usuarios")
+    public List<Usuario> getUsuarios(){
+        return usuarioDao.getUsuarios();
+    }
 
     @RequestMapping(value = "usuario2")
     public Usuario editar() {
@@ -54,6 +58,4 @@ public class UsuarioController {
         usuario.setTelefono("652206959");
         return usuario;
     }
-
-
 }
