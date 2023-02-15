@@ -14,7 +14,7 @@ import java.util.List;
 public class UsuarioController {
     @Autowired
     private UsuarioDao usuarioDao;
-    @RequestMapping(value = "usuario/{id}")
+    @RequestMapping(value = "api/usuarios/{id}")
     public Usuario getUsuario(@PathVariable Long id ){
         Usuario  usuario = new Usuario();
         usuario.setId(id);
@@ -24,7 +24,7 @@ public class UsuarioController {
         usuario.setTelefono("652206959");
         return usuario;
     }
-    @RequestMapping(value = "usuarios")
+    @RequestMapping(value = "api/usuarios")
     public List<Usuario> getUsuarios(){
         return usuarioDao.getUsuarios();
     }
